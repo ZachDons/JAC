@@ -22,7 +22,7 @@ p_out(2) = 204.54; %Solar Array Retraction
 p_out(3) = 172.02; %Charge
 p_out(4) = 140.70; %Safe Mode
 p_out(5) = 145.94; %Aerocapture
-p_out(6) = 542.23; %Downlink
+p_out(6) = 432.23; %Downlink
 p_out(7) = 323.25; %Science
 p_out(8) = 134.94; %Eclipse
 
