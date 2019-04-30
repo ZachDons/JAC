@@ -3,7 +3,17 @@ function [] = plotSchedule(hrTable)
 % Graphically display the planet schedule
 figure
 hold on
-for ii = 1:200%length(hrTable)
+% pltInd1 = floor(length(hrTable)/2)+730;
+% pltInd2 = floor(length(hrTable)/2) + 940;
+% pltInd1 = 1;
+% pltInd2 = 211;
+
+pltInd1 = length(hrTable)-210;
+pltInd2 = length(hrTable);
+
+
+
+for ii = pltInd1:pltInd2
     if strcmp(char(hrTable(ii,1)), 'Io')
         plot([ii-1, ii], [0, 0],  'r', 'LineWidth', 80);
     elseif strcmp(char(hrTable(ii,1)),'Europa')
@@ -30,6 +40,8 @@ h(5) = plot(NaN,NaN,'-y', 'LineWidth', 2);
 h(6) = plot(NaN,NaN,'-k', 'LineWidth', 2);
 legend(h, 'Io', 'Europa', 'Ganymede', 'Callisto', 'Charging', 'Downlink', 'Location', 'best');
 ylim([-1 1])
+xlim([pltInd1 pltInd2])
+title('Orbit Schedule')
 yticks(0)
 yticklabels({'Moons'})
 grid minor

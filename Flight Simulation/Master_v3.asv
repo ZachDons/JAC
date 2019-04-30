@@ -92,7 +92,7 @@ xlswrite('ObritBreakdown.xls',hrTable)
 
 %% Plot Eclipse
 avgEcl = mean(JACEcl)/60; %min
-title2 = ['Average Eclipse duration: ',num2str(avgEcl), ' min'];
+title2 = ['Average Eclipse duration: ',num2str(avgEcl), ' s'];
 figure
 hold on
 plot(1:length(JACEcl),JACEcl./60, 'o','MarkerEdgeColor','y',...

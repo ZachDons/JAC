@@ -16,7 +16,7 @@ timeT = [0 0 0 0]; % Total Time per moon
 % Designate the moon weighting
 viewTotal = 60; % Available time per orbit for science
 %perMoon = [0.01 0.3 0.3 0.39]; %Must add to 1
-perMoon = [0.15 0.17 0.2 0.45]; %Must add to 1
+perMoon = [0.1 0.17 0.33 0.45]; %Must add to 1
 
 avail = [0 0 0 0]; % Availabilite of moons vector
 strMoons = {'Io','Europa','Ganymede','Callisto'};

@@ -7,12 +7,9 @@ numMoon = 1:4;
 lenData = length(JAC);
 vecMoon = tbodies;
 % Optimum Range for viewing 
-% uLim = 1200000; %km
-% lLim = 800000; %km
-% uLim_Call = 1500000; %km
-uLim = 2000000; %km
-lLim = 0; %km
-uLim_Call = 2000000; %km
+uLim = 1200000; %km
+lLim = 800000; %km
+uLim_Call = 1400000; %km
 
 
 for ii = numMoon
@@ -56,11 +53,8 @@ for ii = numMoon
     end
     % Available range for each moon that fits "optimum conditions"
     moonDist = vecnorm(JAC2Moon,2,2);
-    if ii == 4
-        JAC2Moon(moonDist>uLim_Call,:) = nan;
-    else
-        JAC2Moon(moonDist>uLim,:) = nan;
-    end
+    if ii ==
+    JAC2Moon(moonDist>uLim,:) = nan;
     JAC2Moon(moonDist<lLim,:) = nan;
     vecMoon(:,2:4,ii) = JAC2Moon;
     tempBod = vecMoon(:,:,ii);
